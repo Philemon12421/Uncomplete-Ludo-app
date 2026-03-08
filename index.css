@@ -1,0 +1,39 @@
+:root{
+   --red: #fa0000;
+   --green: #009a2a;
+   --yellow: #fee800;
+   --blue: #00acff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(circle, rgba(11,64,177,1) 0%, rgba(7,30,78,1) 100%);
+}
+
+.ludoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    height: 100vh;
+}
+
+#ludoBoard {
+    max-width: 500px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: grid;
+    grid-template-areas: 'red-Board red-Board green-Path green-Board green-Board'
+    'red-Board red-Board green-Path green-Board green-Board'
+    'red-Path red-Path win-Zone yellow-Path yellow-Path'
+    'blue-Board blue-Board blue-Path yellow-Board yellow-Board'
+    'blue-Board blue-Board blue-Path yellow-Board yellow-Board';
+}
